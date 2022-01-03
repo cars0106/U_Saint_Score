@@ -1,7 +1,9 @@
 package com.project.u_saint_score
 
+import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -13,6 +15,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+
+        val verticalSpaceItemDecoration = VerticalSpaceItemDecoration(20)
+        recyclerView.addItemDecoration(verticalSpaceItemDecoration)
 
         val datas = arrayListOf<RecyclerData>(
             RecyclerData("CHAPEL", "P"),
@@ -28,5 +33,18 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
+    }
+
+
+    inner class VerticalSpaceItemDecoration(private val verticalSpaceHeight: Int): RecyclerView.ItemDecoration() {
+        override fun getItemOffsets(
+            outRect: Rect,
+            view: View,
+            parent: RecyclerView,
+            state: RecyclerView.State
+        ) {
+            super.getItemOffsets(outRect, view, parent, state)
+            outRect.bottom = 20
+        }
     }
 }

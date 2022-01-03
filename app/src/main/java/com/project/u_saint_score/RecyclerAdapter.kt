@@ -1,6 +1,7 @@
 package com.project.u_saint_score
 
 import android.content.Context
+import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
