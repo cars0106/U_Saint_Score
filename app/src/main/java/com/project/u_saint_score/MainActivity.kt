@@ -44,7 +44,10 @@ class MainActivity : AppCompatActivity() {
             state: RecyclerView.State
         ) {
             super.getItemOffsets(outRect, view, parent, state)
-            outRect.bottom = 20
+
+            if(parent.getChildAdapterPosition(view) == 0) {
+                outRect.top = 10
+            }
         }
     }
 }
