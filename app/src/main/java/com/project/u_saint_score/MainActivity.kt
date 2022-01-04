@@ -1,9 +1,11 @@
 package com.project.u_saint_score
 
+import android.content.Intent
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,10 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
 
-        val verticalSpaceItemDecoration = VerticalSpaceItemDecoration(20)
+        val verticalSpaceItemDecoration = VerticalSpaceItemDecoration()
         recyclerView.addItemDecoration(verticalSpaceItemDecoration)
+
 
         val datas = arrayListOf<RecyclerData>(
             RecyclerData("CHAPEL", "P"),
@@ -33,10 +36,16 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
+
+        val imageButton: ImageButton = findViewById(R.id.profile_button)
+        imageButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
-    inner class VerticalSpaceItemDecoration(private val verticalSpaceHeight: Int): RecyclerView.ItemDecoration() {
+    inner class VerticalSpaceItemDecoration(): RecyclerView.ItemDecoration() {
         override fun getItemOffsets(
             outRect: Rect,
             view: View,
