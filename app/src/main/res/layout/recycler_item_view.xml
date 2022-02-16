@@ -1,35 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:background="@drawable/round_corner"
-    android:layout_marginRight="20dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginBottom="20dp"
-    android:elevation="10dp"
-    android:padding="20dp">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:elevation="10dp">
 
-    <TextView
-        android:id="@+id/recycler_item_subject_text"
-        android:layout_width="240dp"
-        android:layout_height="20dp"
-        android:fontFamily="@font/notosanskr_regular"
-        android:includeFontPadding="false"
-        android:textSize="16dp"
-        android:text="기본 텍스트" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/recycler_item_professor_text"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textColor="@color/text_gray"
+            android:includeFontPadding="false"
+            android:textSize="10dp"
+            android:text="교수" />
+
+        <TextView
+            android:id="@+id/recycler_item_subject_text"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textColor="@color/text_black"
+            android:includeFontPadding="false"
+            android:textSize="14dp"
+            android:gravity="center_vertical"
+            android:text="과목명 텍스트" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/recycler_item_grade_text"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/text_black"
+            android:includeFontPadding="false"
+            android:textSize="14dp"
+            android:text="A0" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
-
-    <TextView
-        android:id="@+id/recycler_item_grade_text"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:fontFamily="@font/roboto_bold"
-        android:includeFontPadding="false"
-        android:textSize="16dp"
-        android:text="F" />
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/back_ground" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
