@@ -4,6 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back_ground"
     tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/round_corner_edit_text"
+            android:padding="20dp"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textSize="14dp"
+            android:includeFontPadding="false"
+            android:hint="학번을 입력해주세요."/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textSize="14dp"
+            android:includeFontPadding="false"
+            android:hint="비밀번호를 입력해주세요."
+            android:background="@drawable/round_corner_edit_text"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_corner_button"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textSize="14dp"
+            android:text="로그인"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
