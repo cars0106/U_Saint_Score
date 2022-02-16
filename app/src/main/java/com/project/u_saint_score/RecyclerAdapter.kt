@@ -22,10 +22,12 @@ class RecyclerAdapter(private val context: Context, private val datas: ArrayList
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val textProfessor: TextView = itemView.findViewById(R.id.recycler_item_professor_text)
         private val textSubject: TextView = itemView.findViewById(R.id.recycler_item_subject_text)
         private val textGrade: TextView = itemView.findViewById(R.id.recycler_item_grade_text)
 
         fun bind(item: RecyclerData) {
+            textProfessor.text = item.professor
             textSubject.text = item.subject
             textGrade.text = item.grade
         }

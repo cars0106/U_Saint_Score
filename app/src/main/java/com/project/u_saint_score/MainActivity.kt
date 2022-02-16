@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
 
 
         val datas = arrayListOf<RecyclerData>(
-            RecyclerData("CHAPEL", "P"),
-            RecyclerData("앱프로그래밍기초및실습", "A0"),
-            RecyclerData("알고리즘", "A-"),
-            RecyclerData("오픈소스기반기초설계", "A0"),
-            RecyclerData("컴퓨터구조", "B0"),
-            RecyclerData("컴퓨터네트워크", "A-")
+            RecyclerData("황선홍", "CHAPEL", "P"),
+            RecyclerData("최지웅","앱프로그래밍기초및실습", "A0"),
+            RecyclerData("최지웅","알고리즘", "A-"),
+            RecyclerData("김익수","오픈소스기반기초설계", "A0"),
+            RecyclerData("김병기","컴퓨터구조", "B0"),
+            RecyclerData("신용태","컴퓨터네트워크", "A-")
         )
 
         recyclerAdapter = RecyclerAdapter(this, datas)
