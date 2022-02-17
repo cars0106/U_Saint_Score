@@ -1,7 +1,6 @@
 package com.project.u_saint_score
 
 import android.content.Context
-import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +18,11 @@ class RecyclerAdapter(private val context: Context, private val datas: ArrayList
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(datas[position])
+
+        if(position == datas.size - 1) run {
+            val divideView: View = holder.itemView.findViewById(R.id.divisionLine)
+            divideView.visibility = View.GONE
+        }
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
