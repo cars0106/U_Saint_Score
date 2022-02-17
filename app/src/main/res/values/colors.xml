@@ -11,4 +11,5 @@
     <color name="text_black">#FF424242</color>
     <color name="text_gray">#FF767676</color>
     <color name="button_color">#FFC4C4C4</color>
+    <color name="transparent">#CC000000</color>
 </resources>

@@ -90,6 +90,16 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_corner_button"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textSize="14dp"
+            android:text="새로고침"/>
+
     </LinearLayout>
 
 

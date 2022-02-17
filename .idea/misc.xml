@@ -8,6 +8,9 @@
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/circle_button.xml" value="0.378125" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/ic_heroicons_solid_menu_alt.xml" value="0.2015625" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2015625" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/ic_menu_camera.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/ic_person.xml" value="0.20462962962962963" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/round_corner.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/drawable/round_corner_button.xml" value="0.20208333333333334" />
@@ -16,7 +19,14 @@
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/font/font.xml" value="0.20462962962962963" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/activity_main2.xml" value="0.1859375" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/activity_profile.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/activity_web_view.xml" value="0.1" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/app_bar_main.xml" value="0.1859375" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/content_main.xml" value="0.1859375" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/fragment_home.xml" value="0.1859375" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/fragment_slideshow.xml" value="0.1859375" />
+        <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/nav_header_main.xml" value="0.1859375" />
         <entry key="..\:/Users/User/U_Saint_Score/app/src/main/res/layout/recycler_item_view.xml" value="0.33" />
       </map>
     </option>
