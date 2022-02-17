@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         btnRefresh.setOnClickListener {
             val intent = Intent(this, WebViewActivity::class.java)
+            intent.putExtra("url", "https://saint.ssu.ac.kr/irj/portal?NavigationTarget=ROLES://portal_content/ac.ssu.pct.fd.SSU/ac.ssu.pct.fd.COMMON/ac.ssu.pct.fd.Role/ac.ssu.pct.fd.New_No_EntryPoint/ssu.ac.pct.r.Graduate/ssu.ac.pct.r.Graduate_CM/ac.ssu.pct.cm.ws.ws_cm002/ac.ssu.pct.cm.iv.cmS0006")
             startActivity(intent)
         }
     }
