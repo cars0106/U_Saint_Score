@@ -5,11 +5,14 @@ import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var getResultText: ActivityResultLauncher<Intent>
     lateinit var recyclerAdapter: RecyclerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,10 +40,18 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
 
+        getResultText = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val grade = result.data?.getStringExtra("grade")
+                textviewGrade.setText(grade)
+            }
+        }
+
         btnRefresh.setOnClickListener {
             val intent = Intent(this, WebViewActivity::class.java)
             intent.putExtra("url", "https://saint.ssu.ac.kr/irj/portal?NavigationTarget=ROLES://portal_content/ac.ssu.pct.fd.SSU/ac.ssu.pct.fd.COMMON/ac.ssu.pct.fd.Role/ac.ssu.pct.fd.New_No_EntryPoint/ssu.ac.pct.r.Graduate/ssu.ac.pct.r.Graduate_CM/ac.ssu.pct.cm.ws.ws_cm002/ac.ssu.pct.cm.iv.cmS0006")
-            startActivity(intent)
+            getResultText.launch(intent)
         }
     }
 
